@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Menu, Icon } from 'antd';
 
-import './antd.min.css';
+import 'antd/dist/antd.min.css';
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -34,13 +34,13 @@ export default class Header extends React.Component {
                 <Menu.Item key="app" disabled>
                     <Icon type="appstore" />
                     Navigation Two
-            </Menu.Item>
+                </Menu.Item>
                 <SubMenu
                     title={
                         <span className="submenu-title-wrapper">
                             <Icon type="setting" />
                             Navigation Three - Submenu
-                </span>
+                        </span>
                     }
                 >
                     <Menu.ItemGroup title="Item 1">
@@ -55,7 +55,7 @@ export default class Header extends React.Component {
                 <Menu.Item key="alipay">
                     <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
                         Navigation Four - Link
-              </a>
+                    </a>
                 </Menu.Item>
             </Menu>
 
