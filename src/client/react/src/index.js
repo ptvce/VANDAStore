@@ -11,12 +11,13 @@ import NotFind from './components/NotFind';
 const routes = (
     <BrowserRouter>
         <Router>
+            <Switch>
+                <Route exact path="/" component={App} />
 
-            <Route path="/" component={App} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/contact" component={Contact} />
-            {/* <Route component={NotFind} /> */}
-
+                <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
+                <Route component={NotFind} />
+            </Switch>
         </Router>
     </BrowserRouter>
 );

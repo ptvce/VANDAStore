@@ -35,7 +35,7 @@ export default class Header extends React.Component {
                     <Icon type="home" /> <Link style={{ display: 'inline-block' }} to="/">Home</Link>
                 </Menu.Item>
                 <Menu.Item key="app">
-                    <Icon type="appstore" />Products
+                    <Icon type="appstore" /> <Link style={{ display: 'inline-block' }} to="/products">Products</Link>
                 </Menu.Item>
                 <Menu.Item key="alipay">
                     <a href="https://roocket.ir" target="_blank">Example - Link</a>
