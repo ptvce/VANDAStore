@@ -28,7 +28,7 @@ export default class Header extends React.Component {
 
         return (
 
-            <Menu onClick={this.handleClick}
+            <Menu className="menu" onClick={this.handleClick}
                 selectedKeys={[this.state.current]}
                 mode="horizontal">
                 <Menu.Item key="morepage:home">
