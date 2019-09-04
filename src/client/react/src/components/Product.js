@@ -23,7 +23,7 @@ export default class Product extends React.Component {
                 </div>
                 <div style={{ padding: '0px 16px 10px' }}>
                     <Tag color="#54d068">{details.price}$</Tag>
-                    <Tag color="#108ee9" onClick={() => this.props.addToCard(this.props.index)} >Add To Card</Tag>
+                    <Tag color="#108ee9" onClick={() => this.props.addToCart(this.props.index)} >Add To Card</Tag>
                 </div>
             </Card >
         )

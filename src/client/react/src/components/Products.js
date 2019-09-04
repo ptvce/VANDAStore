@@ -9,8 +9,8 @@ export default class Products extends React.Component {
     constructor(props) {
         super(props);
 
-        this.renderProduct = this.renderProduct.bind(this);
         this.renderRow = this.renderRow.bind(this);
+        this.renderProduct = this.renderProduct.bind(this);
         this.chunkProduct = h.array_chunk(Object.keys(this.props.products), 3);
     }
 
@@ -18,7 +18,7 @@ export default class Products extends React.Component {
         console.log(key);
         return (
             <Col key={key} span={8}>
-                <Product details={this.props.products[key]} addToCard={this.props.addToCard} />
+                <Product index={key} details={this.props.products[key]} addToCart={this.props.addToCart} orders={this.props.orders} />
             </Col>
         );
     }
