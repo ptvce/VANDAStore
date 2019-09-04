@@ -12,6 +12,7 @@ export default class Product extends React.Component {
     render() {
         console.log(this.props.details);
         let details = this.props.details;
+        let styleBuy = details.available && this.props.orders.indexOf(this.props.index) == -1 ? '' : { cursor: 'not-Allowed', backgroundColor: '#999' }
         return (
             <Card style={{ margin: 'auto 15px 25px' }} bodyStyle={{ padding: 0 }}>
                 <div className="custom-image">
@@ -23,7 +24,7 @@ export default class Product extends React.Component {
                 </div>
                 <div style={{ padding: '0px 16px 10px' }}>
                     <Tag color="#54d068">{details.price}$</Tag>
-                    <Tag color="#108ee9" onClick={() => this.props.addToCart(this.props.index)} >Add To Card</Tag>
+                    <Tag color="#108ee9" style={styleBuy} onClick={() => this.props.addToCart(this.props.index)} >Add To Card</Tag>
                 </div>
             </Card >
         )
