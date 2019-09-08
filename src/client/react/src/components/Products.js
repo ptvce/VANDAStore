@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import { Col, Row } from 'antd';
 
 import h from './../helper';
 
 import Product from './Product';
 
-export default class Products extends React.Component {
+class Products extends React.Component {
     constructor(props) {
         super(props);
 
@@ -43,3 +44,15 @@ export default class Products extends React.Component {
         );
     }
 }
+
+Products.propTypes = {
+    addToCart: PropTypes.func.isRequired,
+    products: PropTypes.object,
+    orders: PropTypes.array.isRequired
+}
+
+Products.defaultProps = {
+    orders: []
+}
+
+export default Products;
