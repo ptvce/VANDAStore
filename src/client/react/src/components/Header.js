@@ -18,7 +18,7 @@ export default class Header extends React.Component {
     }
 
     handleClick(e) {
-        // e.preventDefault() ;
+        // e.preventDefault();
         this.setState({
             current: e.key
         });
@@ -28,14 +28,14 @@ export default class Header extends React.Component {
 
         return (
 
-            <Menu onClick={this.handleClick}
+            <Menu className="menu" onClick={this.handleClick}
                 selectedKeys={[this.state.current]}
                 mode="horizontal">
-                <Menu.Item key="morepage:home">
+                <Menu.Item key="home">
                     <Icon type="home" /> <Link style={{ display: 'inline-block' }} to="/">Home</Link>
                 </Menu.Item>
                 <Menu.Item key="app">
-                    <Icon type="appstore" />Products
+                    <Icon type="appstore" /> <Link style={{ display: 'inline-block' }} to="/products">Products</Link>
                 </Menu.Item>
                 <Menu.Item key="alipay">
                     <a href="https://roocket.ir" target="_blank">Example - Link</a>

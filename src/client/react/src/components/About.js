@@ -11,8 +11,8 @@ export default class About extends React.Component {
         return (
             <Row type="flex" justify="center">
                 <Col span={12}>
-                    <WelCome title="Welcome to my about page" />
                     <Header SelectedMenu="morepage:about" />
+                    <WelCome title="Welcome to my About page" />
                 </Col>
             </Row>
         );

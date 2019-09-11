@@ -11,8 +11,8 @@ export default class Contact extends React.Component {
         return (
             <Row type="flex" justify="center">
                 <Col span={12}>
-                    <WelCome title="Welcome to my Contact page" />
                     <Header SelectedMenu="morepage:contact" />
+                    <WelCome title="Welcome to my Contact page" />
                 </Col>
             </Row>
         );
