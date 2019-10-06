@@ -20,3 +20,7 @@
 .shop-card {
    padding: 10px 16px; 
 }
+
+.ant-form-item {
+    margin-bottom: 0
+}
