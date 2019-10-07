@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'antd';
 import Cookie from 'universal-cookie';
+import ReactMixin from 'react-mixin';
 import Data from './data.js';
 import Header from './components/Header';
 import WelCome from './components/Welcome';
 import Products from './components/Products';
+import Mixins from './mixins';
 
 const cookie = new Cookie();
-export default class App extends React.Component {
+class App extends React.Component {
     constructor(props) {
         super(props);
 
@@ -16,6 +18,8 @@ export default class App extends React.Component {
             orders: (typeof (cookie.get('orders')) == "undefined" ? [] : cookie.get('orders'))
         }
         this.addToCart = this.addToCart.bind(this);
+
+        this.success('hello world');
     }
 
     addToCart(key) {
@@ -29,7 +33,8 @@ export default class App extends React.Component {
     }
 
     render() {
-        console.log('order:' + this.state.orders);
+        //  console.log('order:' + this.state.orders);
+        this.error('order:' + this.state.orders);
         return (
             <Row type="flex" justify="center">
                 <Col span={12}>
@@ -42,4 +47,5 @@ export default class App extends React.Component {
     }
 }
 
-
+ReactMixin.onClass(App, Mixins.Logs);
+export default App;
